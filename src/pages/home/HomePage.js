@@ -1,132 +1,107 @@
 import axios from "axios";
+import '../../App.css';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import { BASE_URL } from "../../constants/BASE_URL"
 import * as s from "./styled";
-import githubImg from "../../assets/img/githubLogo.png"
-import githubFooter from "../../assets/img/githubLogoFooter.png"
+import OficinaLogo from "../../assets/img/oficina-logo.png"
+// import githubFooter from "../../assets/img/githubLogoSocials.png"
+import mailLogo from "../../assets/img/mail.png"
+import phoneLogo from "../../assets/img/phone.png"
+import facebookLogo from "../../assets/img/facebook.png"
+import instagramLogo from "../../assets/img/instagram.png"
+import youtubeLogo from "../../assets/img/youtube.png"
+import whatsappLogo from "../../assets/img/whatsapp.png"
 import { goToHistoricPage } from "../../routes/coordinator";
-import Profile from "../../components/profile/Profile";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-function showHiringMessage() { try { window.console.log("\n%cOl\u00e1!\n%cEsse é o buscador de usuários do Github desenvolvido por Márleo Piber\n\n%cAgora se você quer buscar um Dev promissor, clique no link abaixo:\n%chttps://github.com/marleopr\n", "font-family: serif; font-size: 32px; color: #767676", "font-family: serif; font-size: 25px; color: #24292f; font-weight: bold;", "font-family: sans-serif; font-size: 16px; line-height: 1.2rem; color: #767676", "font-family: sans-serif; font-size: 11px; text-decoration: underline; line-height: 1.2rem; color: #767676") } catch (a) { } }
-showHiringMessage();
 
 export default function HomePage() {
     const navigate = useNavigate();
 
-    const [searchProfile, setSearchProfile] = useState()
-    const [dataProfile, setDataProfile] = useState()
-    const [profileExist, setProfileExist] = useState(false)
 
-    let listaProfiles = JSON.parse(localStorage.getItem('listaProfiles')) || []
-
-
-    const getProfile = (username) => {
-        if (searchProfile) {
-
-            axios
-                .get(`${BASE_URL}${username}`)
-                .then((res) => {
-                    setProfileExist(true)
-                    setDataProfile(res.data)
-                    const newDataProfile = res.data
-                    newDataProfile.dateSearch = Date.now()
-                    listaProfiles.push(newDataProfile)
-                    localStorage.setItem('listaProfiles', JSON.stringify(listaProfiles))
-                    setSearchProfile("")
-                    toast.success('Buscando perfil...')
-                })
-                .catch((error) => {
-                    const errorCode = error.response.status
-                    if (errorCode >= 400 && errorCode < 500) {
-                        toast.error('Usuário não encontrado!', {
-                            position: "top-right",
-                            autoClose: 2000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                            theme: "light",
-                        });
-                    } else {
-                        toast.error('Erro no servidor', {
-                            position: "top-right",
-                            autoClose: 2000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                            theme: "light",
-                        });
-                    }
-                })
-        } else {
-            toast.warn('Digite um usuário!', {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
-        }
-    }
-
-    const onChangeSearchProfile = (event) => {
-        setSearchProfile(event.target.value)
-    }
-
-    const onChangeBox = (event) => {
-        setProfileExist(false)
-    }
-
-    // useEffect(() => {
-    //     getMovies()
-    // }, [page])
 
     return (
         <s.Body>
-            <s.Header>
-                <s.Logo src={githubImg}></s.Logo>
-            </s.Header>
-            <s.BoxSearch>
-                {
-                    !profileExist ?
-                        <s.BoxSearch>
-                            <s.InputSearch
-                                value={searchProfile}
-                                onChange={onChangeSearchProfile}
-                                placeholder="Buscar conta Github..."
-                                type={"text"}
-                            />
+            {/* <s.Header>
+                <s.Logo src={OficinaLogo}></s.Logo>
+            </s.Header> */}
 
-                            <s.Buttons>
-                                {/* <s.ButtonBack onClick={() => goToStartPage(navigate)}> Voltar </s.ButtonBack> */}
-                                <s.ButtonHistoric onClick={() => goToHistoricPage(navigate)}> Histórico </s.ButtonHistoric>
-                                {/* <s.ButtonSearch onClick={() => getProfile(searchProfile)}> Pesquisar </s.ButtonSearch> */}
-                                <s.ButtonSearch onClick={() => getProfile(searchProfile)}> Pesquisar </s.ButtonSearch>
+            <header class="header">
+                <div class="content">
+                    <a href="#" target="_blank" class="logo"></a>
+                    <s.Logo src={OficinaLogo}></s.Logo>
 
-                                {/* <button onClick={success}>Notify !</button> */}
-                                <ToastContainer />
+                    <input class="mobile-btn" type="checkbox" id="mobile-btn" />
+                    <label class="mobile-icon" for="mobile-btn"><span class="hamburguer"></span></label>
 
-                            </s.Buttons>
-                        </s.BoxSearch>
-                        :
-                        <Profile
-                            dataProfile={dataProfile}
-                            onChangeBox={onChangeBox}
-                        />
-                }
-            </s.BoxSearch>
-            <s.Footer>
-                <a a href="https://github.com/marleopr" target="_blank"><s.LogoFooter src={githubFooter}></s.LogoFooter></a>
-            </s.Footer>
+                    <ul class="nav">
+                        <li><a href="#" title="Home">Home</a></li>
+                        <li><a href="#" title="Sobre">Sobre</a></li>
+                        <li><a href="#" title="Produtos">Produtos</a></li>
+                        <li><a href="#" title="Contato">Contato</a></li>
+
+                    </ul>
+                </div>
+            </header>
+
+            {/* <s.Footer> */}
+            {/* <s.LogoFooter src={OficinaLogo}></s.LogoFooter>
+                <s.TextFooter>
+                    Oficina Crestani
+                    </s.TextFooter> */}
+
+
+                    aaaaa
+            <footer class="main_footer container">
+
+                <div class="content">
+                    <div class="colfooter">
+
+                        <h3 class="titleFooter"> Menu</h3>
+
+                        <ul>
+
+                            <li><a href="#" title="Página Inícial">Página Inícial</a></li>
+                            <li><a href="#" title="Sobre a Empresa">Sobre a Empresa</a></li>
+                            <li><a href="#" title="Galeria de Fotos">Galeria de Fotos</a></li>
+                            <li><a href="#" title="Fale Conosco">Fale Conosco</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="colfooter">
+
+                        <h3 class="titleFooter"> Contato</h3>
+                        <s.Contato>
+                            <p><i class="icon icon-mail"> <s.LogoContato src={mailLogo}></s.LogoContato></i> irmaoscrestani@hotmail.com</p>
+                            <p><i class="icon icon-phone"> <s.LogoContato src={phoneLogo}></s.LogoContato></i> (55) 3255-1263</p>
+                            <p><i class="icon icon-whatsapp"> <s.LogoContato src={whatsappLogo}></s.LogoContato></i> (55) 99929-3552</p>
+                        </s.Contato>
+                    </div>
+                    <div class="colfooter">
+
+                        <h3 class="titleFooter"> Redes Sociais</h3>
+                        <div>
+                            <div></div>
+                        </div>
+                        <s.Socials>
+                            <a a href="https://www.facebook.com/oficinacrestani" target="_blank"><s.LogoSocials src={facebookLogo}></s.LogoSocials></a>
+                            <a a href="https://www.instagram.com/oficinacrestani" target="_blank"><s.LogoSocials src={instagramLogo}></s.LogoSocials></a>
+                            <a a href="https://www.youtube.com/channel/UCFNHGEwfVmVRRVB9QssriPA" target="_blank"><s.LogoSocials src={youtubeLogo}></s.LogoSocials></a>
+                            <a a href="https://api.whatsapp.com/send/?phone=5555999164755&text=Ola&type=phone_number&app_absent=0" target="_blank"><s.LogoSocials src={whatsappLogo}></s.LogoSocials></a>
+                        </s.Socials>
+                    </div>
+                    <div class="clear"></div>
+
+                </div>
+                <div class="main_footer_copy">
+
+                    <p class="m-b-footer"> Oficina Crestani - 2023, todos os direitos reservados.</p>
+                    <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: <a href="#" title="Seu nome">Márleo Piber</a></p>
+
+                </div>
+            </footer>
+
+            {/* </s.Footer> */}
         </s.Body>
     )
 }
