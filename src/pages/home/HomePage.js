@@ -1,8 +1,9 @@
-import axios from "axios";
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 import '../../App.css';
-import { useState } from "react";
 import { useNavigate } from "react-router-dom"
-import { BASE_URL } from "../../constants/BASE_URL"
 import * as s from "./styled";
 import OficinaLogo from "../../assets/img/oficina-logo.png"
 // import githubFooter from "../../assets/img/githubLogoSocials.png"
@@ -12,13 +13,13 @@ import facebookLogo from "../../assets/img/facebook.png"
 import instagramLogo from "../../assets/img/instagram.png"
 import youtubeLogo from "../../assets/img/youtube.png"
 import whatsappLogo from "../../assets/img/whatsapp.png"
-import { goToHistoricPage } from "../../routes/coordinator";
-import 'react-toastify/dist/ReactToastify.css';
+import Carousel from '../../components/Carousel/Carousel';
+import Footer from '../../components/Footer/Footer';
+
+// import { goToHistoricPage } from "../../routes/coordinator";
 
 export default function HomePage() {
     const navigate = useNavigate();
-
-
 
     return (
         <s.Body>
@@ -44,15 +45,17 @@ export default function HomePage() {
                 </div>
             </header>
 
+            <s.CarouselStyle>
+                <Carousel />
+            </s.CarouselStyle>
+
             {/* <s.Footer> */}
             {/* <s.LogoFooter src={OficinaLogo}></s.LogoFooter>
                 <s.TextFooter>
                     Oficina Crestani
                     </s.TextFooter> */}
 
-
-                    aaaaa
-            <footer class="main_footer container">
+            {/* <footer class="main_footer container">
 
                 <div class="content">
                     <div class="colfooter">
@@ -99,7 +102,9 @@ export default function HomePage() {
                     <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: <a href="#" title="Seu nome">Márleo Piber</a></p>
 
                 </div>
-            </footer>
+            </footer> */}
+
+            <Footer />
 
             {/* </s.Footer> */}
         </s.Body>
