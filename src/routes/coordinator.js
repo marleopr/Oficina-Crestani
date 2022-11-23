@@ -9,7 +9,6 @@ export const goToSobrePage = (navigate) => {
   navigate("/sobre");
 }
 
-
 export const goBack = (navigate) => {
   navigate(-1)
 }
