@@ -18,6 +18,7 @@ export default () => (
         showThumbs={false}
         infiniteLoop={true}
         stopOnHover={false}
+        showIndicators={false}
     >
         <div>
             <img alt="" src={img1} />

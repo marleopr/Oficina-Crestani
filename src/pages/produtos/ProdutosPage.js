@@ -15,11 +15,10 @@ import youtubeLogo from "../../assets/img/youtube.png"
 import whatsappLogo from "../../assets/img/whatsapp.png"
 import Carousel from '../../components/Carousel/Carousel';
 import Footer from '../../components/Footer/Footer';
-import { goToProdutosPage } from '../../routes/coordinator';
 
 // import { goToHistoricPage } from "../../routes/coordinator";
 
-export default function HomePage() {
+export default function ProdutosPage() {
     const navigate = useNavigate();
 
     return (
@@ -37,20 +36,23 @@ export default function HomePage() {
                     <label class="mobile-icon" for="mobile-btn"><span class="hamburguer"></span></label>
 
                     <ul class="nav">
-                        {/* <li><a href="#" title="Home">Home</a></li> */}
-                        {/* <li ><a href="produtos" title="Produtos"></a>Produtos</li> */}
-                        <li ><a href="produtos" title="Produtos">Produtos</a></li>
-                        {/* <li onClick={() => goToProdutosPage(navigate)}><a href="#" title="Produtos">Produtos</a></li> */}
-                        <li><a href="#" title="Sobre">Sobre</a></li>
+                        <li><a href="/" title="Home">Home</a></li>
+                        <li><a href="sobre" title="Sobre">Sobre</a></li>
+                        {/* <li><a href="#" title="Produtos">Produtos</a></li> */}
                         <li><a href="#" title="Contato">Contato</a></li>
 
                     </ul>
                 </div>
             </header>
+            <s.CardMovies>
+                <s.ImagesPoster>
+                    <s.PosterPath>
+                    </s.PosterPath>
+                </s.ImagesPoster>
+                <s.Title>
 
-            <s.CarouselStyle>
-                <Carousel />
-            </s.CarouselStyle>
+                </s.Title>
+            </s.CardMovies>
 
             {/* <s.Footer> */}
             {/* <s.LogoFooter src={OficinaLogo}></s.LogoFooter>
