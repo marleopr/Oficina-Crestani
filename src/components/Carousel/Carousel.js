@@ -19,6 +19,7 @@ export default () => (
         infiniteLoop={true}
         stopOnHover={false}
         showIndicators={false}
+        showStatus={false}
     >
         <div>
             <img alt="" src={img1} />
