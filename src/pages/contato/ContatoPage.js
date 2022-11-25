@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "../../App.css";
 import { render } from 'react-dom';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -16,10 +17,14 @@ import whatsappLogo from "../../assets/img/whatsapp.png"
 import Carousel from '../../components/Carousel/Carousel';
 // import Footer from '../../components/Footer/Footer';
 import { goToProdutosPage } from '../../routes/coordinator';
+import MapPage from '../../components/Maps/MapPage.tsx';
+// import SimpleMap from '../../components/Maps/Maps';
 
 // import { goToHistoricPage } from "../../routes/coordinator";
 
-export default function HomePage() {
+export const REACT_APP_GOOGLE_API_KEY = "AIzaSyCU7jwnmpsmZJjgTW3xbj424S9G5SL_1-M";
+
+export default function ContatoPage() {
     const navigate = useNavigate();
 
     return (
@@ -31,26 +36,43 @@ export default function HomePage() {
             <header class="header">
                 <div class="content">
                     <a href="#" target="_blank" class="logo"></a>
-                    <s.Logo src={OficinaLogo}></s.Logo>
+                    <a href="/"><s.Logo title="Voltar para a página inicial" src={OficinaLogo}></s.Logo></a>
 
                     <input class="mobile-btn" type="checkbox" id="mobile-btn" />
                     <label class="mobile-icon" for="mobile-btn"><span class="hamburguer"></span></label>
 
                     <ul class="nav">
-                        {/* <li><a href="#" title="Home">Home</a></li> */}
+                        <li><a href="/" title="Home">Home</a></li>
                         {/* <li ><a href="produtos" title="Produtos"></a>Produtos</li> */}
                         <li ><a href="produtos" title="Produtos">Produtos</a></li>
                         {/* <li onClick={() => goToProdutosPage(navigate)}><a href="#" title="Produtos">Produtos</a></li> */}
                         <li><a href="sobre" title="Sobre">Sobre</a></li>
-                        <li><a href="contato" title="Contato">Contato</a></li>
+                        {/* <li><a href="#" title="Contato">Contato</a></li> */}
 
                     </ul>
                 </div>
             </header>
-
-            <s.CarouselStyle>
-                <Carousel />
-            </s.CarouselStyle>
+            <s.Main>
+                <s.Mapa>
+                    <MapPage />
+                </s.Mapa>
+                <s.ContatoMain>
+                    <s.ContatoText>
+                        Visite-nos na nossa loja física e redes sociais:
+                        <p>
+                            Rua Matias Velho, 10 - Centro, Jaguari - RS, 97760-000 <br/>
+                            Segunda a sexta-feira: 07:30 - 12:00 (manhã) 13:30 - 18:00 (tarde) <br/>
+                            Sábado: 07:30 - 12:00
+                        </p>
+                    </s.ContatoText>
+                    <s.ContatoSocials>
+                        <a a href="https://www.facebook.com/oficinacrestani" target="_blank" title='Facebook'><s.LogoSocials src={facebookLogo}></s.LogoSocials></a>
+                        <a a href="https://www.instagram.com/oficinacrestani" target="_blank" title='Instagram'><s.LogoSocials src={instagramLogo}></s.LogoSocials></a>
+                        <a a href="https://www.youtube.com/channel/UCFNHGEwfVmVRRVB9QssriPA" target="_blank" title='YouTube'><s.LogoSocials src={youtubeLogo}></s.LogoSocials></a>
+                        <a a href="https://api.whatsapp.com/send/?phone=5555999164755&text=Ola&type=phone_number&app_absent=0" target="_blank" title='WhatsApp'><s.LogoSocials src={whatsappLogo}></s.LogoSocials></a>
+                    </s.ContatoSocials>
+                </s.ContatoMain>
+            </s.Main>
 
             {/* <s.Footer> */}
             {/* <s.LogoFooter src={OficinaLogo}></s.LogoFooter>
@@ -62,11 +84,11 @@ export default function HomePage() {
 
                 <div class="content">
                     <div class="colfooter">
-                    
-                    <s.Endereco>
-                        
-                        <h3 class="titleFooter"> Endereço e atendimento</h3>
-                    </s.Endereco>
+
+                        <s.Endereco>
+
+                            <h3 class="titleFooter"> Endereço e atendimento</h3>
+                        </s.Endereco>
 
                         <ul>
                             <div>
