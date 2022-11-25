@@ -42,7 +42,7 @@ export default function ContatoPage() {
                     <label class="mobile-icon" for="mobile-btn"><span class="hamburguer"></span></label>
 
                     <ul class="nav">
-                        <li><a href="/" title="Home">Home</a></li>
+                        <li><a href="/" title="Home">Início</a></li>
                         {/* <li ><a href="produtos" title="Produtos"></a>Produtos</li> */}
                         <li ><a href="produtos" title="Produtos">Produtos</a></li>
                         {/* <li onClick={() => goToProdutosPage(navigate)}><a href="#" title="Produtos">Produtos</a></li> */}
