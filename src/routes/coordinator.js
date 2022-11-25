@@ -8,6 +8,9 @@ export const goToProdutosPage = (navigate) => {
 export const goToSobrePage = (navigate) => {
   navigate("/sobre");
 }
+export const goToContatoPage = (navigate) => {
+  navigate("/contato");
+}
 
 export const goBack = (navigate) => {
   navigate(-1)

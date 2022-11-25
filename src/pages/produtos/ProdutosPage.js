@@ -40,7 +40,7 @@ export default function ProdutosPage() {
                             <li><a href="/" title="Home">Início</a></li>
                             <li><a href="sobre" title="Sobre">Sobre</a></li>
                             {/* <li><a href="#" title="Produtos">Produtos</a></li> */}
-                            <li><a href="#" title="Contato">Contato</a></li>
+                            <li><a href="contato" title="Contato">Contato</a></li>
 
                         </ul>
                     </div>
