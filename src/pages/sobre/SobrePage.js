@@ -124,7 +124,7 @@ export default function SobrePage() {
                 <div class="main_footer_copy">
 
                     <p class="m-b-footer"> Oficina Crestani - 2023, todos os direitos reservados.</p>
-                    <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: <a href="https://github.com/marleopr" target="_blank" title="Seu nome">Márleo Piber</a></p>
+                    <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: <a href="https://github.com/marleopr" target="_blank" title="Márleo Piber Full Stack Developer">Márleo Piber</a></p>
 
                 </div>
             </footer>
