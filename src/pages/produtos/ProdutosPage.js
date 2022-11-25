@@ -18,10 +18,12 @@ import Carousel from '../../components/Carousel/Carousel';
 import Footer from '../../components/Footer/Footer';
 import Swiper from '../../components/Swiper/Swiper';
 import { Cards } from './Cards';
+// import ScrollPage from '../../components/Scroll/ScrollPage';
 
 // import { goToHistoricPage } from "../../routes/coordinator";
 
 export default function ProdutosPage() {
+
     const navigate = useNavigate();
 
     return (
@@ -48,22 +50,11 @@ export default function ProdutosPage() {
             </s.MainHeader>
 
             <s.MainCards>
-
                 <Cards />
+                {/* {ScrollPage} */}
 
             </s.MainCards>
-            {/* <s.SwiperStyle>
-                <Swiper />
-            </s.SwiperStyle> */}
-
-
-            {/* <s.Footer> */}
-            {/* <s.LogoFooter src={OficinaLogo}></s.LogoFooter>
-                <s.TextFooter>
-                    Oficina Crestani
-                    </s.TextFooter> */}
-
-            {/* <s.MainFooter> */}
+            {/* <s.VoltarAoTopo href="#"><ion-icon name="arrow-up-sharp"></ion-icon>🔝</s.VoltarAoTopo> */}
 
             <footer class="main_footer container">
 

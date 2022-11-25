@@ -23,13 +23,6 @@ export const MainHeader = styled.div`
 
 `
 
-// export const Header = styled.div`
-//     background-color:#24292f;
-//     width: 100vw;
-//     box-sizing: border-box;
-//     overflow-x: hidden;
-// `
-
 export const Logo = styled.img`
     width: 70px;
     align-items: center;
@@ -38,11 +31,6 @@ export const Logo = styled.img`
         cursor: pointer;
     }
 `
-// export const SwiperStyle = styled.div`
-//   border: solid orange;
-//   width: 50vw;
-//   height: 30vh;
-// `
 
 export const MainCards = styled.div`
   display: flex;
@@ -56,13 +44,11 @@ export const MainCards = styled.div`
   /* box-sizing: border-box; */
   /* overflow-x: hidden; */
 
-  @media screen and (max-device-width : 480px){
-      /* border: 2px solid blue; */
-    /* width: 100vw; */
-    }
+  /* border: 2px solid blue; */
+
 `
 
-export const CardProdutos = styled.div`
+export const CardMovies = styled.div`
     /* border: 2px solid red; */
     /* background-color: #484848; */
 
@@ -72,62 +58,40 @@ export const CardProdutos = styled.div`
     display: flex;
     flex-direction: column;
     align-items:center;
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    width: 100vw;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-
-    background:
-    radial-gradient(black 15%, transparent 16%) 0 0,
-    radial-gradient(black 15%, transparent 16%) 8px 8px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color:#282828;
-    background-size:16px 16px;
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2), 0 10px 20px 0 rgba(0,0,0,0.19);
-
-    /* @media screen and (max-device-width : 480px){
-    width: 150px;
-    height: 250px;
-    } */
+    @media screen and (max-device-width : 480px){
+        font-size: 16px;
+    }
+    /* justify-content:center; */
 `
 
 export const PosterPath = styled.img`
     /* border: 2px solid violet; */
-    width: 220px;
-    height: 220px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* width: 200px; */
+    /* height: 300px; */
     box-sizing: border-box;
-    &:hover {
-		cursor: pointer;
-    transform: scale(1.1);
-    transition: transform .2s;
-	}
-    /* @media screen and (max-device-width : 480px){
-    width: 150px;
-    height: 150px;
-    } */
+    width: 100vw;
+
 `
 
 export const ImagesPoster = styled.div`
     /* border: 2px solid black; */
     box-sizing: border-box;
-    height: 300px; 
+    height: 400px; 
     display: flex;
     justify-content: center;
-    /* @media screen and (max-device-width : 480px){ */
-    /* width: 150px; */
-    /* height: 150px; */
-    /* } */
 `
 
 export const Title = styled.p`
     color: #FFFFFF;
     font-family:'Arial Narrow Bold', sans-serif;
-    text-align: center;
     :hover{
-        cursor: default;
+        cursor: pointer;
+        box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
     }
 `
 
@@ -203,16 +167,6 @@ export const TextFooter = styled.div`
     font-weight: bold;
     text-decoration: none;
     :hover{
-        cursor: pointer;
-    }
-`
-
-export const VoltarAoTopo = styled.div`
-position: fixed;
-bottom: 75px;
-font-size: 50px;
-color: black;
-:hover{
         cursor: pointer;
     }
 `
