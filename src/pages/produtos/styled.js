@@ -62,6 +62,17 @@ export const MainCards = styled.div`
     }
 `
 
+export const TituloCards = styled.div`
+    text-align: center;
+    margin: 10px;
+    h3{
+        font-size: 24px;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);    
+        margin-bottom: 5px;
+    }   
+
+`
+
 export const CardProdutos = styled.div`
     /* border: 2px solid red; */
     /* background-color: #484848; */
@@ -208,11 +219,11 @@ export const TextFooter = styled.div`
 `
 
 export const VoltarAoTopo = styled.div`
-position: fixed;
-bottom: 75px;
-font-size: 50px;
-color: black;
-:hover{
-        cursor: pointer;
-    }
+    position: fixed;
+    bottom: 75px;
+    font-size: 50px;
+    color: black;
+    :hover{
+            cursor: pointer;
+        }
 `
