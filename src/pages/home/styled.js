@@ -13,6 +13,7 @@ export const Body = styled.div`
     align-items: center;
     background-color:#f6f8fa;
     background-size:16px 16px;
+
     `
 
 export const Header = styled.div`
@@ -41,11 +42,15 @@ export const CarouselStyle = styled.div`
 export const Footer = styled.div`
     background-color:#24292f;
     width: 100vw;
+    /* height: 100vh; */
     box-sizing: border-box;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 10px;
+    /* border: solid green; */
+
 `
 
 export const Endereco = styled.div`

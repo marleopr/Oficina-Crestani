@@ -50,11 +50,17 @@ export default function ProdutosPage() {
             </s.MainHeader>
 
             <s.MainCards>
+                <s.TituloCards>
+        <h3>Confira alguns dos nossos produtos:</h3>
+        <h4>Entre em contato para consultar outros</h4>
+                </s.TituloCards>
                 <Cards />
                 {/* {ScrollPage} */}
 
             </s.MainCards>
             {/* <s.VoltarAoTopo href="#"><ion-icon name="arrow-up-sharp"></ion-icon>🔝</s.VoltarAoTopo> */}
+
+            {/* <div class="back-to-top" href="#"></div> */}
 
             <footer class="main_footer container">
 
@@ -110,7 +116,7 @@ export default function ProdutosPage() {
                 <div class="main_footer_copy">
 
                     <p class="m-b-footer"> Oficina Crestani - 2023, todos os direitos reservados.</p>
-                    <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: <a href="https://github.com/marleopr" target="_blank" title="Márleo Piber Full Stack Developer">Márleo Piber</a></p>
+                    <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: <a href="https://marleo-portfolio.vercel.app" target="_blank" title="Márleo Piber Full Stack Developer">Márleo Piber</a></p>
 
                 </div>
             </footer>

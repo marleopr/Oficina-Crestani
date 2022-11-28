@@ -7,6 +7,8 @@ https://oficinacrestani.vercel.app
 # `Descrição`
 Site Oficina Crestani.
 
+MVP (Site em construção)
+
 </br>
 O repositório do projeto pode ser encontrado [aqui](https://github.com/marleopr/Oficina-Crestani)
 
@@ -39,8 +41,10 @@ Márleo Piber da Rosa.
 
 # `Imagens`
 ### Página Home
-<img src="src\assets\img\HomePage1.png"/>
-### Página resultado da pesquisa
-<img src="src\assets\img\HomePage2.png"/>
-### Página histórico
-<img src="src\assets\img\DetalhesPage1.png"/>
+<img src="src\assets\img\HomePage.png"/>
+### Página Produtos
+<img src="src\assets\img\ProdutosPage.png"/>
+### Página Sobre
+<img src="src\assets\img\SobrePage.png"/>
+### Página Contato
+<img src="src\assets\img\ContatoPage.png"/>
