@@ -24,6 +24,8 @@ import MapPage from '../../components/Maps/MapPage.tsx';
 
 export const REACT_APP_GOOGLE_API_KEY = "AIzaSyCU7jwnmpsmZJjgTW3xbj424S9G5SL_1-M";
 
+
+
 export default function ContatoPage() {
     const navigate = useNavigate();
 
