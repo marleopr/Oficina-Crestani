@@ -1,4 +1,10 @@
 import React from "react";
+import "./MapPage.css";
+
+// import dotenv from "dotenv"
+// dotenv.config()
+// import 'dotenv/config';
+
 import {
   GoogleMap,
   Marker,
@@ -8,7 +14,9 @@ import {
   DirectionsRenderer,
 } from "@react-google-maps/api";
 import { REACT_APP_GOOGLE_API_KEY } from "../../pages/contato/ContatoPage";
-import "./MapPage.css";
+
+// const REACT_APP_GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY
+
 
 export interface MapPageProps { }
 
@@ -109,7 +117,9 @@ const MapPage = () => {
   }, [response]);
 
   return (
+    
     <div className="map">
+      
       <LoadScript
         googleMapsApiKey={REACT_APP_GOOGLE_API_KEY}
         libraries={["places"]}
