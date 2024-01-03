@@ -11,7 +11,7 @@ export function Cards() {
         <s.MainCards>
             <s.CardProdutos>
                 <s.ImagesPoster>
-                    <a href="https://api.whatsapp.com/send/?phone=5555999164755&text=Olá Poderia me passar o orçamento do Tratômetro Código: 189383 Marca: PA/VDO?&type=phone_number&app_absent=0"target="_blank"><s.PosterPath src={produto1}></s.PosterPath></a>
+                    <a href="https://api.whatsapp.com/send/?phone=5555999164755&text=Olá Poderia me passar o orçamento do Tratômetro Código: 189383 Marca: PA/VDO?&type=phone_number&app_absent=0"target="blank"><s.PosterPath src={produto1}></s.PosterPath></a>
                 </s.ImagesPoster>
                 <s.Title>
                 Tratômetro <br/> Código: 189383 <br/> Marca: PA/VDO
@@ -20,7 +20,7 @@ export function Cards() {
 
             <s.CardProdutos>
                 <s.ImagesPoster>
-                    <a href="https://api.whatsapp.com/send/?phone=5555999164755&text=Olá Poderia me passar o orçamento do Acoplamento de Borracha Código: 1480921 Marca: AGCO?&type=phone_number&app_absent=0"target="_blank"><s.PosterPath src={produto2}></s.PosterPath></a>
+                    <a href="https://api.whatsapp.com/send/?phone=5555999164755&text=Olá Poderia me passar o orçamento do Acoplamento de Borracha Código: 1480921 Marca: AGCO?&type=phone_number&app_absent=0"target="blank"><s.PosterPath src={produto2}></s.PosterPath></a>
                 </s.ImagesPoster>
                 <s.Title>
                 Acoplamento de Borracha <br/> Código: 1480921 <br/> Marca: AGCO
@@ -29,7 +29,7 @@ export function Cards() {
             
             <s.CardProdutos>
                 <s.ImagesPoster>
-                    <a href="https://api.whatsapp.com/send/?phone=5555999164755&text=Olá Poderia me passar o orçamento do Adesivo Veda Flanges e Roscas? Vedante líquido, semi secativo, 100g Marca: TEKBOND&type=phone_number&app_absent=0"target="_blank"><s.PosterPath src={produto3}></s.PosterPath></a>
+                    <a href="https://api.whatsapp.com/send/?phone=5555999164755&text=Olá Poderia me passar o orçamento do Adesivo Veda Flanges e Roscas? Vedante líquido, semi secativo, 100g Marca: TEKBOND&type=phone_number&app_absent=0"target="blank"><s.PosterPath src={produto3}></s.PosterPath></a>
                 </s.ImagesPoster>
                 <s.Title>
                 Adesivo Veda Flanges e Roscas <br/> Vedante líquido, semi secativo, 100g <br/> Marca: TEKBOND
