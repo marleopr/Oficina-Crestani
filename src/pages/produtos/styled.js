@@ -11,7 +11,6 @@ export const Body = styled.div`
     /* flex-wrap: wrap; */
     justify-content: space-between;
     
-
     align-items: center;
     background-color:#f6f8fa;
     background-size:16px 16px;
@@ -20,8 +19,8 @@ export const Body = styled.div`
 export const MainHeader = styled.div`
     /* border: solid orange; */
     width: 100vw;
-
-`
+    
+    `
 
 // export const Header = styled.div`
 //     background-color:#24292f;
@@ -37,7 +36,7 @@ export const Logo = styled.img`
     :hover{
         cursor: pointer;
     }
-`
+    `
 // export const SwiperStyle = styled.div`
 //   border: solid orange;
 //   width: 50vw;
@@ -45,36 +44,49 @@ export const Logo = styled.img`
 // `
 
 export const MainCards = styled.div`
+  border: solid red;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   /* max-width: 100vw; */
-  width: 100vw;
+  /* width: 100vw; */
+  
   
   /* margin: 100px; */
   /* box-sizing: border-box; */
   /* overflow-x: hidden; */
-
+  
   @media screen and (max-device-width : 480px){
       /* border: 2px solid blue; */
-    /* width: 100vw; */
+      /* width: 100vw; */
     }
-`
+    `
 
 export const TituloCards = styled.div`
     text-align: center;
     margin: 10px;
+    border: solid red;
     h3{
         font-size: 24px;
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);    
         margin-bottom: 5px;
     }   
-
-`
+    
+    `
+    
+export const ContainerCards = styled.div`
+    border: solid red;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px; 
+    .card {
+        max-height: 50px;
+    }
+`;
 
 export const CardProdutos = styled.div`
-    /* border: 2px solid red; */
+    border: 2px solid blue;
     /* background-color: #484848; */
 
     width: 300px;
@@ -151,3 +163,7 @@ export const VoltarAoTopo = styled.div`
             cursor: pointer;
         }
 `
+
+export const ContainerPaginator = styled.div`
+  margin: 20px;
+`;
